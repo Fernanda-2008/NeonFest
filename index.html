@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonFest</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="encabezado">
+    <nav class="navbar">
+        <h1 class="logo">NeonFest</h1>
+
+        <button class="btn-menu" onclick="toggleMenu()">☰</button>
+
+        <ul class="menu" id="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#experiencias">Experiencias</a></li>
+            <li><a href="#boletos">Boletos</a></li>
+            <li><a href="#registro">Registro</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-texto">
+        <span class="etiqueta">Festival 2026</span>
+
+        <h2>La experiencia musical más grande del año</h2>
+
+        <p>
+            Disfruta de conciertos, gastronomía, arte y actividades
+            interactivas en un solo lugar.
+        </p>
+
+        <button onclick="mostrarPromo()">
+            Ver Promoción
+        </button>
+    </div>
+
+    <div class="hero-imagen">
+        <img src="img/portada.jpg" alt="Portada">
+    </div>
+
+</section>
+
+<section class="seccion" id="experiencias">
+
+    <h2>Experiencias</h2>
+
+    <p class="descripcion">
+        Descubre todo lo que NeonFest tiene preparado para ti.
+    </p>
+
+    <div class="contenedor-tarjetas">
+
+        <div class="tarjeta">
+            <img src="img/musica.jpg" alt="Música">
+
+            <div class="tarjeta-info">
+                <h3>Música</h3>
+
+                <p>
+                    Los mejores artistas nacionales e internacionales.
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/comida.jpg" alt="Comida">
+
+            <div class="tarjeta-info">
+                <h3>Comida</h3>
+
+                <p>
+                    Food trucks y gastronomía para todos los gustos.
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <img src="img/arte.jpg" alt="Arte">
+
+            <div class="tarjeta-info">
+                <h3>Arte</h3>
+
+                <p>
+                    Exposiciones, instalaciones y actividades creativas.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="seccion boletos" id="boletos">
+
+    <h2>Boletos</h2>
+
+    <div class="planes">
+
+        <div class="plan">
+            <h3>General</h3>
+
+            <div class="precio">$500</div>
+
+            <p>Acceso general al evento.</p>
+
+            <button onclick="seleccionarBoleto('General')">
+                Seleccionar
+            </button>
+        </div>
+
+        <div class="plan destacado">
+            <h3>VIP</h3>
+
+            <div class="precio">$1000</div>
+
+            <p>Acceso preferencial y zona exclusiva.</p>
+
+            <button onclick="seleccionarBoleto('VIP')">
+                Seleccionar
+            </button>
+        </div>
+
+        <div class="plan">
+            <h3>Premium</h3>
+
+            <div class="precio">$1500</div>
+
+            <p>Experiencia completa del festival.</p>
+
+            <button onclick="seleccionarBoleto('Premium')">
+                Seleccionar
+            </button>
+        </div>
+
+    </div>
+
+    <div id="boletoSeleccionado"></div>
+
+</section>
+
+<section class="seccion registro" id="registro">
+
+    <h2>Registro</h2>
+
+    <form class="formulario">
+
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+
+        <label>Correo electrónico</label>
+        <input type="email" id="correo">
+
+        <label>Tipo de boleto</label>
+
+        <select id="tipo">
+            <option>General</option>
+            <option>VIP</option>
+            <option>Premium</option>
+        </select>
+
+        <button type="button" onclick="registrar()">
+            Registrarme
+        </button>
+
+    </form>
+
+    <div id="respuesta"></div>
+
+</section>
+
+<footer>
+    <p>© 2026 NeonFest | Todos los derechos reservados</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
